@@ -1,0 +1,47 @@
+manifestVersion: 1.1
+id: constant-qbittorrent
+category: Networking
+name: qBittorrent
+version: "5.2.2"
+tagline: Free and reliable P2P BitTorrent client
+icon: https://www.qbittorrent.org/images/qbittorrent.png
+description: >-
+  qBittorrent is an open-source software alternative to µTorrent. It's designed to meet the needs of most users while using as little CPU and memory as possible.
+
+
+  ⚠️ This version routes all traffic through the Constant Gluetun VPN container.
+
+
+  🛠️ SET-UP INSTRUCTIONS
+
+  1. Install and configure Constant Gluetun VPN first (add your ProtonVPN WireGuard key to exports.sh)
+  2. Install qBittorrent
+  3. Change the default password after installation (default: admin / adminadmin)
+  4. Keep the default download path set to "/downloads" so files appear in your Umbrel downloads folder
+
+
+  Some additional tips:
+
+  - This app comes bundled with two alternative Web UIs: VueTorrent and Nightwalker. To enable them, navigate to tools → options → Web UI and select "Use alternative Web UI". In the "Files location" field, enter "/app/vuetorrent" for VueTorrent or "/app/nightwalker" for Nightwalker and then click "Save".
+
+  - qBittorrent downloads torrents over the VPN, not Tor.
+developer: qBittorrent
+website: https://qbittorrent.org/
+dependencies:
+  - constant-gluetun
+repo: https://github.com/qBittorrent/qBittorrent
+support: https://github.com/qBittorrent/qBittorrent/issues
+port: 8080
+gallery: []
+releaseNotes: >-
+  Initial release routing qBittorrent traffic through Gluetun VPN.
+
+  Based on the official Umbrel qBittorrent app (release-5.2.2).
+path: ""
+defaultUsername: "admin"
+defaultPassword: "adminadmin"
+torOnly: false
+permissions:
+  - STORAGE_DOWNLOADS
+submitter: constantgillet
+submission: https://github.com/constantgillet/umbrel-app-store
