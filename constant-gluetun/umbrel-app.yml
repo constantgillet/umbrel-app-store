@@ -1,9 +1,9 @@
 manifestVersion: 1
-id: gluetun
+id: constant-gluetun
 name: 1.0 Gluetun VPN
 tagline: Lightweight VPN client with support for multiple providers
-icon: https://path-to-a-nice-icon/gluetun.svg
-category: networking
+icon: https://raw.githubusercontent.com/qdm12/gluetun/master/doc/logo.svg
+category: Networking
 version: "3.40.3"
 description: >-
   Gluetun is a lightweight VPN client written in Go that supports multiple VPN providers
@@ -38,7 +38,7 @@ description: >-
   Logs:  
     ⚠️ NOTE: To follow the logs of the Gluetun container:
     Please ssh into your umbrel or via the settings icon -> Advanced settings -> Terminal (open)
-    - sudo docker logs -f YourID-gluetun_server_1
+    - sudo docker logs -f YourID-constant-gluetun_server_1
 
 
 releaseNotes: >-
