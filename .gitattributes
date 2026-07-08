@@ -1,0 +1,4 @@
+# Shell scripts and Umbrel lifecycle hooks must use LF so they run on Linux.
+*.sh text eol=lf
+**/hooks/** text eol=lf
+**/exports.sh text eol=lf

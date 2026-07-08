@@ -2,7 +2,7 @@ manifestVersion: 1.1
 id: constant-qbittorrent
 category: networking
 name: qBittorrent
-version: "5.2.2"
+version: "5.2.3"
 tagline: Free and reliable P2P Bittorrent client
 icon: https://raw.githubusercontent.com/getumbrel/umbrel-apps-gallery/master/qbittorrent/icon.svg
 description: >-
