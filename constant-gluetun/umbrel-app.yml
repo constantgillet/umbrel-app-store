@@ -11,7 +11,7 @@ description: >-
   them to route their traffic through the VPN connection.
   
   
-  This setup is pre-configured for ProtonVPN Wireguard but supports many other providers. Other
+  This setup is pre-configured for ProtonVPN WireGuard (France). Other
   containers can route their traffic through Gluetun by using its network stack.
   
   
@@ -21,18 +21,20 @@ description: >-
     - DNS over TLS (DoT) support
     - HTTP proxy server
     - Health monitoring and automatic reconnection
-    - Port forwarding support (provider dependent)
   
   ⚠️ IMPORTANT:
-    Before installing, make sure you have your ProtonVPN credentials ready. (Because i use protonvpn ;-) )
-    You'll need to add the PROTONVPN_PRIVATE_KEY in the exports.sh file.
-    !! Also if you want port forwarding, choose the private key belonging to the portforwarding setup in the protonvpn configurator
-    https://protonvpn.com/support/vpn-config-download/
+    Before installing, generate a WireGuard config at ProtonVPN and copy the PrivateKey value.
+    Add it to exports.sh on your Umbrel after install:
+    ~/umbrel/app-data/constant-gluetun/exports.sh
+    https://protonvpn.com/support/wireguard-configurations/
 
 
   🛠️ SET-UP INSTRUCTIONS
-    After installing Gluetun STOP the container and fill in the private key in the exports file!!!!
-    ⚠️ NOTE: Please ssh into your umbrel or via the settings icon -> Advanced settings -> Terminal (open) to change the exports file.
+    1. Install Gluetun from the Constant App Store
+    2. Stop the app
+    3. Edit ~/umbrel/app-data/constant-gluetun/exports.sh and set PROTONVPN_PRIVATE_KEY to your WireGuard PrivateKey
+    4. Start the app again
+    ⚠️ NOTE: Open Terminal via Settings → Advanced settings, or SSH into your Umbrel.
 
 
   Logs:  
